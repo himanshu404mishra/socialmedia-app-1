@@ -6,8 +6,14 @@ import Noti from "../../assets/img/noti.png";
 import Comment from "../../assets/img/comment.png";
 import { FiSettings } from "react-icons/fi";
 import TrendCard from "../TrendCard/TrendCard";
+import ShareModal from "../ShareModal/ShareModal";
+
+import { useDisclosure } from '@mantine/hooks';
+
 
 const RightSide = () => {
+  const [opened, { open, close }] = useDisclosure(false);
+
     return (
         <div className="RightSide">
             <div className="navIcons">
@@ -18,9 +24,11 @@ const RightSide = () => {
             </div>
 
             <TrendCard/>
-            <div className="button r-button">
+            <div className="button r-button" onClick={open}>
                 Share
             </div>
+            <ShareModal opened={opened} close={close}/>
+
         </div>
     );
 };

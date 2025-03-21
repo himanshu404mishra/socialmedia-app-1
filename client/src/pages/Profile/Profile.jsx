@@ -14,6 +14,7 @@ const Profile = () => {
             <PostSide/>
         </div>
         <RightSide/>
+
     </div>
   )
 }

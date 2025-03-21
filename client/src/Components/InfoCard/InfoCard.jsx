@@ -1,12 +1,20 @@
 import "./InfoCard.css"
 import { FaPencilAlt } from "react-icons/fa";
+import ProfileModal from "../ProfileModel/ProfileModel";
+
+import { useDisclosure } from '@mantine/hooks';
+
+
 const InfoCard = () => {
+  const [opened, { open, close }] = useDisclosure(false);
+    
   return (
     <div className='InfoCard'>
         <div className="infoHead">
             <h4>Your Info</h4>
             <div>
-            <FaPencilAlt style={{fontSize:"20px"}}/>
+                <FaPencilAlt onClick={open}  style={{fontSize:"20px"}}/>
+                <ProfileModal opened={opened} close={close}/>
             </div>
         </div>
 
