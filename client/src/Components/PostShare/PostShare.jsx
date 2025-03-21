@@ -67,7 +67,7 @@ const PostShare = () => {
 
                 {image && (
                     <div className="previewImage">
-                        <IoCloseSharp style={{fontSize:"25px", cursor:"pointer"}} onClick={function(){
+                        <IoCloseSharp style={{fontSize:"25px", cursor:"pointer", backgroundColor:"var(--orange)", borderRadius:"25px", color:"var(--black)"}} onClick={function(){
                             setImage(null)
                         }} />
                         <img src={image.image} alt="" />

@@ -1,0 +1,60 @@
+import React from "react";
+import "./Auth.css";
+import Logo from "../../assets/img/logo.png";
+
+const Auth = () => {
+    return (
+        <div className="Auth">
+            <div className="a-left">
+                <img src={Logo} alt="" />
+                <div className="Webname">
+                    <h1>JutaMar Media</h1>
+                    <h6>
+                        Explore the ideas throughtout the world <br /> by JUTTA
+                        maring and Khaing...
+                    </h6>
+                </div>
+            </div>
+
+            <SignUp />
+        </div>
+    );
+};
+
+function SignUp() {
+    return (
+        <div className="a-right">
+            <form className="infoForm">
+                <h3>Sign up</h3>
+                    <div>
+                        <input
+                            type="text"
+                            placeholder="First Name"
+                            className="infoInput"
+                            name="firstName"
+                        />
+                        <input
+                            type="text"
+                            name="lastName"
+                            className="infoInput"
+                            placeholder="Last Name"
+                        />
+                    </div>
+                    <div>
+                        <input
+                            type="text"
+                            placeholder="Username"
+                            className="infoInput"
+                            name="username"
+                        />
+                    </div>
+                    <div>
+                        <input type="password" placeholder="Password" name="password" className="infoInput" />
+                        <input type="password" placeholder="Confirm Password" name="confirmPassword" className="infoInput" />
+                    </div>
+            </form>
+        </div>
+    );
+}
+
+export default Auth;
